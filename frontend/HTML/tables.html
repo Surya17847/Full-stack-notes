@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+<style>
+  table{
+    /* background-color: #313131; */
+    width: 100%;
+   border-collapse: collapse;
+   
+   text-align: center;
+   color: black;
+  }
+  td,th {
+    border: 1px solid rgb(19, 13, 13);
+  }
+  tr:nth-child(even){
+    background-color: #848383;
+  }
+  th{
+    background-color: aqua;
+  }
+</style>
+</head>
+<body>
+  <table style="width: 100%;">
+    <colgroup>
+      <col span="1" style="background-color: yellow;"/>
+    </colgroup>
+    <tr>
+      <th >Country</th>
+      <th>Country code</th>
+      <th>Email</th>
+    </tr>
+    <!-- colspan and rowspan used to make same column or row respectively read on mdn -->
+    <tr>
+      <td>India</td>
+      <td>In</td>
+      <td>india@gmail.com</td>
+      </tr>
+    <tr>
+      <td>USA</td>
+      <td>us</td>
+      <td>usa@gmail.com</td>
+      </tr>
+    <tr>
+      <td>Germany</td>
+      <td>gm</td>
+      <td>germany@gmail.com</td>
+      </tr>
+  </table>
+</body>
+<!-- table>tr>td*3   tr table row th table heading and td for table datasyntax for table -->
+</html>

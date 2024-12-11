@@ -1,0 +1,70 @@
+ * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman';
+  box-sizing: content-box;
+}
+/*
+html, body {
+  height: 0;
+  width: 0;
+} */
+/*  inline css has higher prioritythan other uske baad jo last mai likha hoga wo property use hoga */
+
+/* #box {
+  background-color: blue;
+}
+
+.heading {
+  color: red;
+  text-align: center;
+}*/
+  /* text-transform: capitalize; only 1st letter of evey word will get capitalize */
+/*#btn {
+  background-color: green;
+}
+#outer {
+  font-size: 25px;
+}
+#inner {
+  font-size: 10px;
+} */
+
+.main{
+  height: 100%;
+  width: 100%;
+  /* position: relative parent ko dena achi baat hoti hai bcoz usse children bigadta nhi hai*/
+  position: relative;
+}
+
+nav{
+  height: 100px;
+  width: 100%;
+  /* background-color: crimson; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw ;
+  /* 0 upar niche or 4vw right left mai padding */
+}
+
+.nav-part2{
+  display: flex;
+  gap:4vw;   
+}
+nav h2{
+  font-size: 6vw;
+  font-weight: 700;
+}
+nav h4{
+  font-size: 1vw;
+}
+/* responsiveness practice ke through aata hai */
+/* cta- con through action */
+@media (max-width: 600px) {
+  nav {
+    background-color: lightseagreen;
+    color:#fff;
+    padding: 0 5vw;
+  }
+}

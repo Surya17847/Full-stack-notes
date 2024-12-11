@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link tag</title>
+    <style>
+        body{
+            background-color: #fff;
+            color: #0d1514;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google</h1>
+   <button style="border-color: black; background-color:#999999;">
+     <a target="_self" href="http://google.com">GOOGLE</a></button>
+     <img src="./acc.png" alt="No image" >
+     <!-- absolute and relative path ./ = current folder  if you want to go previous folder use./../ 
+      -->
+      <!-- try not to give spaces in name of pic -->
+     <picture>
+        <source srcset="./Screenshot"/> //self 
+        
+    </picture>
+<!-- use picture tag and study from mdn  -->
+    <!-- images are multimillionare dollar market use copy image address img ke saath use height and weight koi ek hi use karo if ratio not known-->
+    <img  ondblclick="two()" src="./acc.png" usemap="#image-map">
+
+<map name="image-map">
+    <area target="" alt="" title="" href="" coords="374,659,582,600" shape="rect">
+    <area target="" alt="" title="" href="" coords="NaN" shape="circle">
+</map>
+<!-- use online map generator we can create images and target using maps(coordinates)-->
+    <!-- you can use map inhtml which requires lot of JS code you can also use onclick function -->
+    <script>
+function one(){
+    alert("you clicked one")
+}
+function two(){
+    alert("clicked on two")
+}
+    </script>
+
+</body>
+</html>

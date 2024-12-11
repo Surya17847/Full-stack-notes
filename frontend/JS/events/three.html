@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment | JS</title>
+</head>
+<body>
+  <h1>Chai aur JS</h1>
+  <button id="stop">Stop</button>
+  <button id="start">Start</button>
+</body>
+<script> 
+  const sayDate = function(str){
+    console.log(str, Date.now());
+  }
+  
+  let intervalId;
+  
+  document.querySelector("#start").addEventListener("click", function() {
+    // Only start a new interval if one is not already running
+    if (!intervalId) {
+      intervalId = setInterval(sayDate, 1000, "hi");
+    }
+  });
+  
+  document.querySelector("#stop").addEventListener("click", function() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null; // Reset the intervalId
+    }
+  });
+</script>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment | JS</title>
+</head>
+<body>
+  <h1>Chai aur JS</h1>
+  <button id="stop">Stop</button>
+  <button id="start">Start</button>
+  </body>
+  <script>
+  const sayDate = function(str){
+    console.log(str, Date.now());
+  }
+   let intervalId;   
+  document.querySelector("#start").addEventListener("click", function(){
+    if(!intervalId){
+      let intervalId = setInterval(sayDate, 1000, "hi") // setInteval mai 3rd parameter bhi hota hai we can pass into the function
+    }
+  });
+  
+    document.querySelector("#stop").addEventListener("click", function(){
+    if(intervalId){
+      clearInterval(intervalId) // it will clear all the values of setInterval
+    }
+    intervalId = null; //Reset the intervalId to null
+    });
+</script>
+</html> -->

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic CSS</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /* html {
+    background: url(https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center fixed ;
+    background-size: cover; 
+
+  } */
+  body {
+    background-color: #313131;
+  }
+    h1 {
+    color: rgba(2, 15, 89, 0.796);
+    background-color: rgb(13, 189, 154);
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid rgb(236, 231, 231);
+    padding: 20px ;
+    margin: 100px;
+    border-radius: 2rem;
+    text-decoration: underline;
+  }
+  span {
+    background-color: rgb(13, 189, 154);
+    font-size: 100px;   
+  }
+/* margin collapsing problem : top and bottom margin will collapse */
+/* padding inside and margin outside */
+/* block level and inline elements to find give bcg-color and identify*/
+/* we can convert block to inline & vice versa */
+/* thus wherever space there block level will adjust there */
+  
+
+/* a {
+    background-color: #ffffff; // all the a tags will get selected
+  } */
+  /* a[target="_blank"] { // only the a tags with target="_blank" will get selected
+    padding: 10px;
+    background-color: aliceblue;
+  } */
+
+   /* h1, h2, h3 { // selects all h1 h2 and h3 
+    background-color: aqua;
+   } */
+
+    /* ul li { // ul ke andar jo li hai wo select hoga 
+      background-color: blueviolet;
+    } */
+    
+     /* 
+      header > a {  // header ke andar jo a hai wo select hoga
+      background-color: aquamarine;
+      padding: 10px;
+     } */
+    /* img + p { //selects the 1st sibling p of img element
+      background-color: aquamarine;
+      padding: 10px;
+     } */
+  /*span:hover {
+      background-color: rgb(19, 6, 201);
+    }
+    button:hover {
+      background-color: rgb(20, 218, 14);
+      padding: 10px;
+    }
+    div:nth-child(2n){ // all even number div will get selected
+      background-color: rgb(13, 189, 154);
+      padding: 10px;
+    } */
+     /* h1::after {  // all h1 div will get selected and AFTER!!! will be added after the content
+      content: " AFTER!!!";
+      color: red; */
+      /* p::first-letter {
+        font-size: 30px;
+        color: rgb(104, 39, 7);
+      } */
+    
+  </style>
+
+</head>
+<body>
+  <!-- <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1> -->
+  <h1>CSS</h1>
+  <h1>CSS</h1> 
+  <span>
+    Span
+  </span>
+  <h2 style="background-color: black; color:#ffffff">inline CSS</h2>
+  <button>Click me</button>
+</body>
+</html>

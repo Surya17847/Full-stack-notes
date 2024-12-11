@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Amazing image</h2>
+  <div>
+    <ul id="images">
+      <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+      <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+      <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+      <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+      <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+      <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+  </div>
+</body>
+//method-1: dont use onlick in html not a good practice for scalable projects
+<script>
+  //method-2: use onclick in js  
+  // document.getElementById("owl").onclick = function(){
+  //   alert("You clicked on owl") // there can be  some problems thus we should use event listners since they also gives us propogation
+  // }
+
+  //method-3: use event listners  
+  // document.getElementById("owl").addEventListener("click", function(e){
+  // // console.log(e);// it gives a pointerEvent in console   // mostly we get browser events and enviornment event
+
+  //   alert("Clicked owl again") //we should use event listners since they also gives us propogation
+  // },false)
+  
+  //method-4: use attachEvent()  used in early times during internet explorer  
+  // method-5: jQuery - on   event
+  
+  // ***IMP***Syntax***
+  // document.getElementById('id').addEventListener("clickListener", function(e){ use object e }, false/true)  by deafult the value is false it is imp for interview
+  
+  // read about this events
+  //type, timestamp, defaultPrevented/ preventDefault : this is used to change default behaviou
+  // target, toElement, srcElement, currentTarget,
+  //clientX, clientY, screenX, screenY
+  // altkey, ctrlKey, shiftKey, keyCode  this are keyboard events
+  
+  // document.getElementById("images").addEventListener("click", function(e){
+  //   console.log("Clicked inside ul") 
+  // },false)
+  // document.getElementById("owl").addEventListener("click", function(e){
+  //   console.log("Owl clicked") 
+  //   e.stopPropagation()  // isse event bubble up hoke upar nhi jayega
+  // },false)
+  // document.getElementById("google").addEventListener("click", function(e){
+  //   console.log("Google clicked") 
+  //   e.preventDefault();  // isse jo default brhaviour hai link ka wo change ho raha hai 
+  //   e.stopPropagation();
+  // },false)
+
+// ***IMP***
+// EventProprogation has two context:
+// 1 - EventBubbling (false)(default case): it is like bubble blowing up inside element 1st then middle event then outermost event.  
+// eg: inside li event will occur 1st then outside ul event will occur
+// 2 - EventCapturing (true): in this case  event will occur from outside to inside
+// eg: outside ul event will occur 1st then inside li events will occur
+
+
+  document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'IMG') {
+      console.log(e.target.id);
+    
+      let removeIt = e.target.parentNode   
+      removeIt.remove();
+    }
+  }, false)
+    
+    // removeIt.parentNode.removeChild(removeIt)
+
+</script>
+</html>

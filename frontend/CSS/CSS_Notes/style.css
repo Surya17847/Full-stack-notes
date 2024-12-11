@@ -1,0 +1,94 @@
+/* boiler plate for CSS  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+#parent {
+  /* margin: 10px 50px; */
+  width: 50vh;
+  height: 50vh;
+  background-color: #414141;
+  /* display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: row; */
+  position: relative;
+}
+
+#box {
+  width: 40%;
+  height: 20%;
+  /* margin: 10px 20px 30px 40px; // T R B L */
+  /* margin: 20px; */
+  background-color: rgb(20, 74, 236);  
+  padding: 20px;
+  border-radius: 2rem;
+  border: 5px solid black;
+  border-color: aqua;
+  /* position: absolute; */
+
+}
+
+#main {
+  width: 25%;
+  height: 40%;
+  color: #ffffff;
+  /* margin: 10px 40px; */
+  background-color: rgb(4, 21, 71);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+  /* position: absolute; */
+}
+
+#container {
+  background-color: brown;
+  height: 20%;
+  width: 20%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+  /* position: absolute; */
+}
+#box1 {
+  background-color: aqua;
+}
+#box2 {
+  background-color: blueviolet;
+}
+#box3 {
+  background-color: gray;
+}
+
+#second {
+  background-color: aliceblue;
+}
+
+/* imp notes */
+
+/* 1. position */
+/* position: absolute karne se wo div hawa mai aa jata hai or baki div uski jagah aa jate hai but doosra koi div ka position absolute karne se wo phele div ke upar aa jayega hawa mai   or ye parent div ke bahar jaa sakta hai */
+/* while position:relative hume parent div pai lagana hota hai jisse wo hawa mai to jayega but parent div ke bahar nhi jaa payega */
+
+/* 2. flex */
+/* while using display:flex */
+/* justify content is for width left to right  */
+/* align items is for height top to bottom  */
+
+/* 3. background image */
+/* html,body {
+  margin: 0;
+  background: url(https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center fixed ;
+  background-size: cover; 
+  background-position: center;
+}// for fixing size of image and its properties  */

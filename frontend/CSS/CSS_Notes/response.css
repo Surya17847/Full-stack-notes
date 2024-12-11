@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+} 
+
+#box {
+  height: 500px;
+  width: 500px;
+  background-color: crimson;
+}
+
+/* % :(depends on parent) parent ke hisab se % leta hai  */
+/* #inner {
+  height: 50%;
+  width: 50%;
+  background-color:blue; ;
+} */
+
+/* vw-(viewport width), vh-(viewport height) mtlb screen ke hisab se height or width change hoga  */
+#inner {
+  height: 50vh;
+  width: 50vw;
+  background-color: royalblue;
+}
+
+/* vmax, vmin: kam usse hota hai 
+
+vmax: jo max hai width ya height uske hisab se change hoga text or ek point ke baad jab width height se kam ho jayega to text size same rahega or height pai depend karega 
+
+vmin: vice versa for vmin*/
+h1 {
+  font-size: 6vmax;
+}
+
+/* em: parent ke font size ke kitne guna 
+eg: parent ka font-size: 20px hai to agar 
+child ko font-size: 2em diyua mtlb parent ak double size means 60px or 1 em means 30px, 
+rem(root em) : rem depends on screen size 
+*** 1 rem = 16px ***
+
+*/
+#parent {
+  background-color: #dadada;
+  width: 40%;
+  font-size: 20px;
+}
+/* em */
+/* h2 {
+  font-size: 1em;
+}
+h3{
+  font-size: 1.5em;
+}
+h4{
+  font-size: 2em; 
+} */
+
+/* rem */
+h2 {
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+h4{
+  font-size: 3rem; 
+}
+ 
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: royalblue;
+  /* use bare min position: absolute */
+  position:absolute;
+  left: 30px;
+}
+
+.parent {
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  /* box flexible ban jata hai */
+  display: flex;
+  /* around mean axis(x-axis) */
+  justify-content: space-evenly;
+  /* around cross axis(y-axis) */
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+
+.child1 {
+  height: 100px;
+  width: 100px;
+  background-color: crimson;
+  border: 5px solid #000000;
+}
+
+.child2 {
+  height: 100px;
+  width: 100px;
+  background-color: crimson;
+}
+
+.child3 {
+  height: 100px;
+  width: 100px;
+  background-color: crimson;
+}
+/* Imp: CSS media queries is imp for responsiveness */
+@media (max-width:600px){
+  /* 600 or 550 is standard size for potrait devices */
+/* this will work when max to max width is 600px(600 se kam chalega) uske upar kaam nhi karega */
+#box{
+  background-color: royalblue;
+  border-radius: 600px;
+}  
+}

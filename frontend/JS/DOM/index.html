@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DOM | Chai aur Code</title>
+    <style>
+    .bg-black { 
+      background-color: black;
+      color: white;
+    }
+    </style>
+</head>
+<!-- Document and Event is Main in JS for Projects   Doctype tells that document type is HTML -->
+<!-- text hai to text node agar text nhi hai to attribute  in DOM diagram -->
+<body  class="bg-black">
+  <!-- <div>
+    <h1 id="title" class="heading">DOM learning on Chai aur Code <span style="display: none"> Test text</span></h1>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <input type="password" id="password" placeholder="Enter your password">
+    <ul>
+      <li class="list">One</li>
+      <li class="list">Two</li>
+      <li class="list">Three</li>
+      <li class="list">Four</li>
+    </ul>
+  </div> -->
+  <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+</body>
+<script>
+  const parent = document.querySelector('.parent') //parent
+  // console.log(parent);
+  // console.log(parent.children);  // we get HTMLCollection fronm parent.children
+  // console.log(parent.children[1].innerHTML) 
+
+  // for (let i = 0; i < parent.children.length; i++) {
+  //   console.log(parent.children[i].innerHTML);
+  // }
+
+  // parent to child move
+parent.children[1].style.color = "orange"
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild);
+
+
+// querySelector expensive since traversing  tree
+// here we are moving from child to parent
+const dayOne = document.querySelector(".day") // child
+// console.log(dayOne);
+// console.log(dayOne.parentElement);
+// console.log(dayOne.nextElementSibling);
+console.log("NODES: ", parent.childNodes); // it is a complex tree sturcture, since spaces count as text as node and each class also count as node
+</script>
+</html>
+<!-- Html collection milta hai links se, wo or array alag hai  -->

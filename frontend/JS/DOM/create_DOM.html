@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM | Chai aur Code</title>
+</head>
+<body  style="background-color: black; color:aliceblue">
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+</body>
+<script>
+  // const div = document.createElement('div')
+  // console.log(div);
+  // div.className = "main"
+  // div.id = Math.round(Math.random() * 10 + 1)
+  // div.setAttribute("title", "generated title")
+  // div.style.backgroundColor = "green"
+  // div.style.padding = "12px"
+  // div.innerText - "Chai aur Code"
+  // const addText = document.createTextNode("Chai aur Code")
+  // div.appendChild(addText)  
+  
+
+  // ye approach mai DOM ko poora tree traverse karnapadta hai or r]end mai add hota hai isliye optimised nhi hai if there is 10000 nodes
+  function addLanguage(langName){
+    const li = document.createElement('li')
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+  }
+  
+  // Optimised approach
+    function addLanguage(langName){
+      const li = document.createElement('li')
+      li.appendChild(document.createTextNode(langName))
+      document.querySelector('.language').appendChild(li) 
+    }
+     
+  addLanguage('Python')
+  addLanguage('Java')
+  addLanguage('TypeScript')
+  
+  //Edit
+  const secondLang  = document.querySelector("li:nth-child(2)")
+  // secondLang.innerHTML = "Mojo"  not a optimised approach
+  const newLi = document.createElement('li')
+  newLi.textContent = "Mojo" //hawa mai hai 
+  secondLang.replaceWith(newLi) 
+
+  //edit 
+  const firstLang = document.querySelector("li")
+  firstLang.outerHTML = '<li>MOJO</li>'
+
+  // remove
+  const lastLang = document.querySelector("li:last-child")
+  lastLang.remove()
+  </script>
+</html> 
